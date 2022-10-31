@@ -3,6 +3,11 @@ function getComputerChoice() {
     const random = Math.floor(Math.random() * choices.length);
     return choices[random];
 }
+function getPlayerChoice() {
+    const playerChoice = prompt("Please input your choice...");
+    const choice = playerChoice.toLowerCase();
+    return choice;
+}
 
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
@@ -25,7 +30,3 @@ function playRound(playerSelection, computerSelection) {
       }
     
 }
-
-const playerSelection = 'paper';
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
