@@ -1,14 +1,18 @@
+//Computer makes a choice
 function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissors'];
     const random = Math.floor(Math.random() * choices.length);
     return choices[random];
 }
+
+// Player makes a choice
 function getPlayerChoice() {
     const playerChoice = prompt("Rock, Paper or Scissors...");
     const choice = playerChoice.toLowerCase();
     return choice;
 }
 
+//Plays one round of the game
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
@@ -31,6 +35,7 @@ function playRound(playerSelection, computerSelection) {
     
 }
 
+//Plays 5 rounds of the game and tally the score
 function game() {
     let computerScore = 0;
     let playerScore = 0;
@@ -60,4 +65,5 @@ function game() {
           }
       }
       
-      game();
+      
+game();
